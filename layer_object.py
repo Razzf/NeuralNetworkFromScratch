@@ -13,6 +13,8 @@ X = np.array([
 ])
 
 X, y = spiral_data(100, 3)
+print("inputs")
+#print(X)
 
 
 class LayerDense:
@@ -28,10 +30,12 @@ class ActivationReLU:
 
 
 layer1 = LayerDense(2, 5)
-layer1.forward(X)
+layer1.forward(X[1])
 activation1 = ActivationReLU()
 activation1.forward(layer1.output)
 
+print("weights")
+print(layer1.weights)
 
-
-print(activation1.output)
+print("output")
+print(layer1.output)
